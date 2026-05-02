@@ -420,6 +420,31 @@ body {
 
 /* Specific backgrounds for theme slides are handled via inline styles for flexibility */
 
+.turma-label {
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.tema-title {
+    font-size: 3.5rem !important;
+    font-weight: 800;
+    color: var(--senai-red);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.tema-desc {
+    font-size: 1.6rem !important;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
 .external-link {
     display: inline-block;
     margin-top: 1.5rem;
