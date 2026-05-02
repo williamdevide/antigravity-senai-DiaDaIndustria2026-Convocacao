@@ -81,14 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function goFirst() {
-        if (isAnimating) return;
         isAnimating = true;
         currentSlide = 0;
         updateUI();
     }
 
     function goLast() {
-        if (isAnimating) return;
         isAnimating = true;
         currentSlide = totalSlides - 1;
         updateUI();
