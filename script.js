@@ -80,9 +80,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function goFirst() {
+        if (isAnimating) return;
+        isAnimating = true;
+        currentSlide = 0;
+        updateUI();
+    }
+
+    function goLast() {
+        if (isAnimating) return;
+        isAnimating = true;
+        currentSlide = totalSlides - 1;
+        updateUI();
+    }
+
     // Event Listeners for Buttons
-    if (btnNext) btnNext.addEventListener('click', goNext);
-    if (btnPrev) btnPrev.addEventListener('click', goPrev);
+    if (btnNext) {
+        btnNext.addEventListener('click', goNext);
+        btnNext.addEventListener('dblclick', (e) => {
+            e.preventDefault();
+            goLast();
+        });
+    }
+    if (btnPrev) {
+        btnPrev.addEventListener('click', goPrev);
+        btnPrev.addEventListener('dblclick', (e) => {
+            e.preventDefault();
+            goFirst();
+        });
+    }
 
     // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
